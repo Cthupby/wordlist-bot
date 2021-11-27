@@ -28,10 +28,12 @@ async def get_new_words(message: types.Message):
     # This handler will be called when user sends 'Get new word' command
     wordlist = get_words()
     # For get word and url from wordlist
-    word = wordlist[0]
-    url = wordlist[1]
+    wordr = wordlist[0]
+    worde = wordlist[1]
+    url = wordlist[2]
     # The user receives a new word and a link to it in the dictionary
-    word =  f"{text(hbold('New english word:'), text(word))}\n" \
+    word =  f"{text(hbold('Русский:'), text(wordr))}\n" \
+	    f"{text(hbold('New english word:'), text(worde))}\n" \
             f"{text(url)}\n"
     await message.answer(word)
 
