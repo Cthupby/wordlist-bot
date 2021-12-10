@@ -12,8 +12,16 @@ def get_words():
     df_all = [df_wordr, df_worde, df_url]
     return df_all
 
+# Function for sending random phrase from dictionary
+def get_phrase():
+    df = pd.read_csv('words_b.csv')
+    # For generate a random mnemonic phrase 
+    df_12w = df.sample(n=12)['English'].to_list() #.to_string(header=False, index=False)]
+    df_w = print(*df_12w, sep=', ')
+    return df_w
+
 def main():
-    print(get_words())
+    get_phrase()
 
 if __name__ == '__main__':
     main()
