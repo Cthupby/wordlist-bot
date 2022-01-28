@@ -1,5 +1,5 @@
 # Wordlist bot
-A simple telegram bot with a connected dictionary that can send words on demand.
+Telegram bot made with [aiogram](https://docs.aiogram.dev/en/latest/) and [pandas](https://pandas.pydata.org/docs/) that can send words from dictionary on demand.
 
 ## Installation
 1. Download the wordlist-bot
