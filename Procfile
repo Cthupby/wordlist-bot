@@ -1,1 +1,1 @@
-web: python wordlist-bot.py
+worker: python bot.py 0.0.0.0:$PORT
