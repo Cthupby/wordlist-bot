@@ -15,17 +15,25 @@ bot = Bot(token=token, parse_mode=types.ParseMode.HTML)
 dp = Dispatcher(bot)
 
 
-@dp.message_handler(commands=['start', 'help'])
+@dp.message_handler(commands=['start'])
 async def send_welcome(message: types.Message):
     # This handler will be called when user sends '/start' or '/help' command
-    await message.reply("Hi!\nI'm Wordlist-bot! I want to help you learn and remember new words.\nPowered by aiogram.")
-    start_buttons = ["Get new word", "Get new random phrase", "/start"]
+    await message.reply("Hi!\nI'm Newwword-bot! I want to help you learn and remember new words.\nMade with aiogram and pandas.")
+    start_buttons = ["New word", "New random phrase", "/start"]
+    keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    keyboard.add(*start_buttons)
+    await message.answer("Choose commands", reply_markup=keyboard)
+
+@dp.message_handler(commands=['help'])
+async def send_help(message: types.Message):
+    # This handler will be called when user sends '/help' command
+    start_buttons = ["New word", "New random phrase", "/start"]
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
     keyboard.add(*start_buttons)
     await message.answer("Choose commands", reply_markup=keyboard)
 
 # Function for sending random word from dictionary
-@dp.message_handler(Text(equals='Get new word'))
+@dp.message_handler(Text(equals='New word'))
 async def get_new_words(message: types.Message):
     # This handler will be called when user sends 'Get new word' command
     wordlist = get_words()
@@ -36,16 +44,18 @@ async def get_new_words(message: types.Message):
     word = f"{text(hbold('New english word:'), text(word))}\n" \
            f"{text(url)}\n"
     await message.answer(word)
+    await message.answer("Success! - /help")
 
 # Function for sending random phrase from dictionary
-@dp.message_handler(Text(equals='Get new random phrase'))
+@dp.message_handler(Text(equals='New random phrase'))
 async def get_new_phrase(message: types.Message):
     # This handler will be called when user sends 'Get new random phrase' command
     phrase = get_phrase()
     # The user receives a new word and a link to it in the dictionary
-    words = f"{text(hbold('New english 12 words phrase:'))}\n" \
-            "{} / {} / {} / {} / {} / {} / {} / {} / {} / {} / {} / {}".format(*phrase).upper()
+    words = f"{text(hbold('New english mnemonic phrase:'))}\n" \
+            "{} / {} / {} / {} / {} / {} / {} / {} / {} / {} / {} / {}".format(*phrase)
     await message.answer(words)
+    await message.answer("Success! - /help")
 
 
 if __name__ == '__main__':
