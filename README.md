@@ -3,8 +3,9 @@ Telegram bot made with [aiogram](https://docs.aiogram.dev/en/latest/) and [panda
 
 ## Installation
 1. Download the wordlist-bot
-2. Create a new virtual environment  
-   ```python -m venv ./venv```
+2. Create and activate virtual environment  
+   ```python -m virualenv venv```
+   ```source ./venv/bin/activate```
 3. Install the required libraries  
   ```pip install -r requirements.txt```
 5. Enter your token from Botfather to config 
