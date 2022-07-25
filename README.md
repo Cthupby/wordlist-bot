@@ -14,7 +14,7 @@ Telegram bot made with [aiogram](https://docs.aiogram.dev/en/latest/) and [panda
 For using worlist in terminal enter  
 ```python main.py```  
 For using worlist bot in telegram  
-```python wordlist-bot.py```
+```python wordlist-bot.py```  
 
 ## Realization
 This bot in telegram - @Newwword_bot
