@@ -1,6 +1,11 @@
 # Wordlist bot
 Telegram bot made with [aiogram](https://docs.aiogram.dev/en/latest/) and [pandas](https://pandas.pydata.org/docs/) that can send words from dictionary on demand.
 
+## Project Technologies:
+
+1. Web-framework: [Aiogram](https://docs.aiogram.dev/en/latest/), [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+2. Database: [Pandas](https://pandas.pydata.org/docs/), [SQLAlchemy](https://www.sqlalchemy.org/)
+
 ## Installation
 1. Download the wordlist-bot
 2. Create and activate virtual environment  
