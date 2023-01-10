@@ -28,4 +28,4 @@ Telegram bot made with [aiogram](https://docs.aiogram.dev/en/latest/) and [panda
 5. Enter your token from Botfather to config    
 
 ## Realization
-This bot in telegram - @Newwword_bot
+This bot in telegram - [@Newwword_bot](https://t.me/Newwword_bot)
