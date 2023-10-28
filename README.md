@@ -26,6 +26,3 @@ Telegram bot made with [aiogram](https://docs.aiogram.dev/en/latest/) and [panda
 3. Create and activate coontainer  
    ```docker run -p 8000:8000 wordlist_bot```
 5. Enter your token from Botfather to config    
-
-## Realization
-This bot in telegram - [@Newwword_bot](https://t.me/Newwword_bot)
