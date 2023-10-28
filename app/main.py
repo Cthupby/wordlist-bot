@@ -1,9 +1,7 @@
 import pandas as pd
 
-from typing import List
 
-
-def get_words() -> List[str]:
+def get_words() -> list[str]:
     '''
     Function for sending random word from dictionary.
     '''
@@ -28,7 +26,7 @@ def get_words() -> List[str]:
     return dataframe_all
 
 
-def get_phrase() -> List[str]:
+def get_phrase() -> list[str]:
     '''
     Function for sending random phrase from dictionary.
     '''
@@ -40,9 +38,5 @@ def get_phrase() -> List[str]:
     return dataframe_phrase
 
 
-def main():
-    get_phrase()
-
-
 if __name__ == '__main__':
-    main()
+    get_phrase()
