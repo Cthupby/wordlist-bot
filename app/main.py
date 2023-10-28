@@ -5,7 +5,7 @@ def get_words() -> list[str]:
     '''
     Function for sending random word from dictionary.
     '''
-    dataframe = pd.read_csv('words_b.csv')
+    dataframe = pd.read_csv('words/words_b.csv')
     dataframe_sample = dataframe.sample()
     '''
     Get 2 columns from dictionary
@@ -30,7 +30,7 @@ def get_phrase() -> list[str]:
     '''
     Function for sending random phrase from dictionary.
     '''
-    dataframe = pd.read_csv('words_b.csv')
+    dataframe = pd.read_csv('words/words_b.csv')
     '''
     Generate a random mnemonic phrase.
     '''
