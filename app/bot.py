@@ -1,4 +1,4 @@
-import logging
+from loguru import logging
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.utils.markdown import hbold, text
 from aiogram.dispatcher.filters import Text
@@ -16,7 +16,7 @@ dp = Dispatcher(bot)
 
 
 @dp.message_handler(commands=['start'])
-async def send_welcome(message: types.Message):
+async def send_welcome(message: types.Message) -> None:
     '''
     This handler will be called when user sends '/start' command.
     '''
@@ -30,7 +30,7 @@ async def send_welcome(message: types.Message):
 
 
 @dp.message_handler(commands=['help'])
-async def send_help(message: types.Message):
+async def send_help(message: types.Message) -> None:
     '''
     This handler will be called when user sends '/help' command
     '''
@@ -41,7 +41,7 @@ async def send_help(message: types.Message):
 
 
 @dp.message_handler(Text(equals='New word'))
-async def get_new_words(message: types.Message):
+async def get_new_words(message: types.Message) -> None:
     '''
     Function for sending random word from dictionary.
     This handler will be called when user sends 'Get new word' command.
@@ -62,7 +62,7 @@ async def get_new_words(message: types.Message):
 
 
 @dp.message_handler(Text(equals='New random phrase'))
-async def get_new_phrase(message: types.Message):
+async def get_new_phrase(message: types.Message) -> None:
     '''
     Function for sending random phrase from dictionary.
     This handler will be called when user sends
